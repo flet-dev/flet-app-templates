@@ -1,4 +1,4 @@
-# A minimal Flet app
+# Flet app templates
 
-Cookiecutter template for a minimal Flet app.
+Cookiecutter templates for Flet apps.
 
