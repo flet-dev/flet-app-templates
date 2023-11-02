@@ -1,7 +1,7 @@
 {
-    "name": "{{project_name}}",
-    "short_name": "{{project_name}}",
-    "description": "{{description}}",
+    "name": "{{cookiecutter.project_name}}",
+    "short_name": "{{cookiecutter.project_name}}",
+    "description": "{{cookiecutter.description}}",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
