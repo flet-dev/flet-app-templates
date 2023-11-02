@@ -1,4 +1,4 @@
-# A {{project_name}} Flet app
+# A {{cookiecutter.project_name}} Flet app
 
 An example of a minimal Flet app.
 
