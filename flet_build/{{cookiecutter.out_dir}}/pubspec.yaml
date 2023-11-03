@@ -1,0 +1,44 @@
+name: {{ cookiecutter.project_name }}
+description: {{ cookiecutter.project_description }}
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  serious_python:
+    git:
+      url: https://github.com/flet-dev/serious-python
+      path: src/serious_python
+      ref: 'd059aef'
+
+  # flet: ^0.10.3
+  flet:
+    git:
+      url: https://github.com/flet-dev/flet.git
+      path: package
+      ref: '37b9581'
+  
+  path: ^1.8.3
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
