@@ -1,4 +1,4 @@
-name: {{ cookiecutter.project_name }}
+name: {{ cookiecutter.project_name.replace("-", "_") }}
 description: {{ cookiecutter.project_description }}
 publish_to: 'none'
 
@@ -11,18 +11,19 @@ dependencies:
   flutter:
     sdk: flutter
 
-  serious_python:
-    git:
-      url: https://github.com/flet-dev/serious-python
-      path: src/serious_python
-      ref: 'd059aef'
+  serious_python: ^0.4.1
+  # serious_python:
+  #   git:
+  #     url: https://github.com/flet-dev/serious-python
+  #     path: src/serious_python
+  #     ref: 'd059aef'
 
-  # flet: ^0.10.3
-  flet:
-    git:
-      url: https://github.com/flet-dev/flet.git
-      path: package
-      ref: '37b9581'
+  flet: ^0.11.0
+  # flet:
+  #   git:
+  #     url: https://github.com/flet-dev/flet.git
+  #     path: package
+  #     ref: '37b9581'
   
   path: ^1.8.3
 
