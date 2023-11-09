@@ -2,7 +2,7 @@
     "out_dir": "",
     "project_name": "",
     "project_description": "",
-    "product_name": "{{ project_name }}",
+    "product_name": "{{ cookiecutter.project_name }}",
     "org_name": "com.flet",
     "company_name": "Your Company",
     "copyright": "Copyright (c) 2023 Your Company",
