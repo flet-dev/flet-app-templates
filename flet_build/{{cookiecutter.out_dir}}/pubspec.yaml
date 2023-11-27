@@ -26,7 +26,7 @@ dependencies:
   #     ref: '37b9581'
   
   path: ^1.8.3
-
+  url_strategy: ^0.2.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
