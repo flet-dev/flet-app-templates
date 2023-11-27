@@ -55,7 +55,7 @@ void main() async {
   runApp(FletApp(
     pageUrl: pageUrl,
     assetsDir: path.join(appDir, "assets"),
-    hideLoadingPage: true,
+    hideLoadingPage: bool.tryParse("{{ cookiecutter.hide_loading_animation }}"),
   ));
 }
 
