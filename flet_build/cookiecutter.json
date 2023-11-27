@@ -7,6 +7,6 @@
     "company_name": "Your Company",
     "copyright": "Copyright (c) 2023 Your Company",
     "sep": "/",
-    "hide_loading_animation": false,
+    "hide_loading_animation": true,
     "hide_splash_screen": false
 }
