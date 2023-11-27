@@ -6,5 +6,7 @@
     "org_name": "com.flet",
     "company_name": "Your Company",
     "copyright": "Copyright (c) 2023 Your Company",
-    "sep": "/"
+    "sep": "/",
+    "hide_loading_page": false,
+    "hide_splash_screen": false
 }
