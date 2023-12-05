@@ -48,22 +48,22 @@ flutter:
 flutter_launcher_icons:
   image_path: "{{ cookiecutter.icon_path }}"
 
-  android: {{ cookiecutter.generate_icons }}
+  android: {{ str(cookiecutter.generate_icons).lower() }}
   image_path_android: "{{ cookiecutter.icon_path_android }}"
 
-  ios: {{ cookiecutter.generate_icons }}
+  ios: {{ str(cookiecutter.generate_icons).lower() }}
   image_path_ios: "{{ cookiecutter.icon_path_ios }}"
   remove_alpha_ios: true
 
   web:
-    generate: {{ cookiecutter.generate_icons }}
+    generate: {{ str(cookiecutter.generate_icons).lower() }}
     image_path: "{{ cookiecutter.icon_path_web }}"
   windows:
-    generate: {{ cookiecutter.generate_icons }}
+    generate: {{ str(cookiecutter.generate_icons).lower() }}
     image_path: "{{ cookiecutter.icon_path_windows }}"
     icon_size: 256
   macos:
-    generate: {{ cookiecutter.generate_icons }}
+    generate: {{ str(cookiecutter.generate_icons).lower() }}
     image_path: "{{ cookiecutter.icon_path_macos }}"
 
 flutter_native_splash:

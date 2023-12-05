@@ -8,5 +8,12 @@
     "copyright": "Copyright (c) 2023 Your Company",
     "sep": "/",
     "hide_loading_animation": true,
-    "hide_splash_screen": false
+    "hide_splash_screen": false,
+    "generate_icons": true,
+    "icon_path": "images/icon.png",
+    "icon_path_ios": "images/icon.png",
+    "icon_path_android": "images/icon.png",
+    "icon_path_windows": "images/icon.png",
+    "icon_path_macos": "images/icon.png",
+    "icon_path_web": "images/icon.png"
 }
