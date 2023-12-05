@@ -9,7 +9,7 @@
     "sep": "/",
     "hide_loading_animation": true,
     "hide_splash_screen": false,
-    "generate_icons": true,
+    "generate_icons": "true",
     "icon_path": "images/icon.png",
     "icon_path_ios": "images/icon.png",
     "icon_path_android": "images/icon.png",
