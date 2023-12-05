@@ -10,3 +10,14 @@
 * `{{ cookiecutter.org_name }}` - org name in reverse domain name notation, e.g. `com.mycompany.myproject`.
 * `{{ cookiecutter.company_name }}` - the name of the company.
 * `{{ cookiecutter.copyright }}` - the name of the company.
+
+## Icons
+
+* iOS - `assets/icon_ios.png` (any supported image format). Recommended minimum image size is 1024 px. Image should not be transparent (have alpha channel). Defaults to `assets/icon.png` with alpha-channel automatically removed.
+* Android - `assets/icon_android.png` (any supported image format). Recommended minimum image size is 192 px. Defaults to `assets/icon.png`.
+* Web - `assets/icon_web.png` (any supported image format). Recommended minimum image size is 512 px. Defaults to `assets/icon.png`. If `assets/favicon.png` file is provided it will be used unmodified (copied to `web/favicon.png`).
+* Windows - `assets/icon_windows.png` (any supported image format). ICO will be produced of 256 px size. Defaults to `assets/icon.png`. If `assets/icon_windows.ico` file is provided it will be just copied to `windows/runner/resources/app_icon.ico` unmodified.
+* macOS - `assets/icon_macos.png` (any supported image format). Recommended minimum image size is 1024 px. Defaults to `assets/icon.png`.
+
+## Splash screens
+
