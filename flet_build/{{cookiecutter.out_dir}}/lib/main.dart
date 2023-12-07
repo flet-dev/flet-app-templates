@@ -29,7 +29,14 @@ void main() async {
     "FLET_PLATFORM": defaultTargetPlatform.name.toLowerCase()
   };
 
-  if (defaultTargetPlatform == TargetPlatform.windows) {
+  if (kIsWeb) {
+    // web mode - connect via HTTP
+    pageUrl = Uri.base.toString();
+    var routeUrlStrategy = getFletRouteUrlStrategy();
+    if (routeUrlStrategy == "path") {
+      setPathUrlStrategy();
+    }
+  } else if (defaultTargetPlatform == TargetPlatform.windows) {
     // use TCP on Windows
     var port = await getUnusedPort();
     pageUrl = "tcp://localhost:$port";
@@ -40,21 +47,14 @@ void main() async {
     environmentVariables["FLET_SERVER_UDS_PATH"] = pageUrl;
   }
 
-  if (kIsWeb) {
-    debugPrint("Flet View is running in Web mode");
-    var routeUrlStrategy = getFletRouteUrlStrategy();
-    debugPrint("URL Strategy: $routeUrlStrategy");
-    if (routeUrlStrategy == "path") {
-      setPathUrlStrategy();
-    }
+  if (!kIsWeb) {
+    SeriousPython.runProgram(path.join(appDir, "main.pyc"),
+        environmentVariables: environmentVariables);
   }
-
-  SeriousPython.runProgram(path.join(appDir, "main.pyc"),
-      environmentVariables: environmentVariables);
 
   runApp(FletApp(
     pageUrl: pageUrl,
-    assetsDir: path.join(appDir, "assets"),
+    assetsDir: kIsWeb ? "" : path.join(appDir, "assets"),
     hideLoadingPage: bool.tryParse(
         "{{ cookiecutter.hide_loading_animation }}".toLowerCase()),
   ));
