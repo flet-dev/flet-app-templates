@@ -38,7 +38,7 @@ void main() async {
     }
   } else if (defaultTargetPlatform == TargetPlatform.windows) {
     // use TCP on Windows
-    var port = await getUnusedPort();
+    var port = int.parse("{{ cookiecutter.windows_tcp_port }}");
     pageUrl = "tcp://localhost:$port";
     environmentVariables["FLET_SERVER_PORT"] = port.toString();
   } else {
@@ -58,12 +58,4 @@ void main() async {
     hideLoadingPage: bool.tryParse(
         "{{ cookiecutter.hide_loading_animation }}".toLowerCase()),
   ));
-}
-
-Future<int> getUnusedPort() {
-  return ServerSocket.bind(InternetAddress.anyIPv4, 0).then((socket) {
-    var port = socket.port;
-    socket.close();
-    return port;
-  });
 }

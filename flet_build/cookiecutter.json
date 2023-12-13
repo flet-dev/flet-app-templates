@@ -7,6 +7,7 @@
     "company_name": "Your Company",
     "copyright": "Copyright (c) 2023 Your Company",
     "sep": "/",
+    "windows_tcp_port": 63777,
     "hide_loading_animation": true,
     "hide_splash_screen": false,
     "generate_icons": "true",
