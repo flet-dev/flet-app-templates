@@ -46,25 +46,25 @@ flutter:
 
 # dart run flutter_launcher_icons
 flutter_launcher_icons:
-  image_path: "{{ cookiecutter.icon_path }}"
+  image_path: "images/icon.png"
 
-  android: {{ cookiecutter.generate_android_icons }}
-  image_path_android: "{{ cookiecutter.icon_path_android }}"
+  android: true
+  image_path_android: "images/icon.png"
 
-  ios: {{ cookiecutter.generate_ios_icons }}
-  image_path_ios: "{{ cookiecutter.icon_path_ios }}"
+  ios: true
+  image_path_ios: "images/icon.png"
   remove_alpha_ios: true
 
   web:
-    generate: {{ cookiecutter.generate_web_icons }}
-    image_path: "{{ cookiecutter.icon_path_web }}"
+    generate: true
+    image_path: "images/icon.png"
   windows:
-    generate: {{ cookiecutter.generate_windows_icons }}
-    image_path: "{{ cookiecutter.icon_path_windows }}"
+    generate: true
+    image_path: "images/icon.png"
     icon_size: 256
   macos:
-    generate: {{ cookiecutter.generate_macos_icons }}
-    image_path: "{{ cookiecutter.icon_path_macos }}"
+    generate: true
+    image_path: "images/icon.png"
 
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen
