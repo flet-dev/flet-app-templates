@@ -130,7 +130,3 @@ flutter_native_splash:
   image_dark_ios: "images/icon.png"
   image_web: "images/icon.png"
   image_dark_web: "images/icon.png"
-
-  # On web, the splash screen fades out in 250ms.  This fade delay can be adjusted by changing
-  # the web_splash_fade_time_ms parameter.
-  web_splash_fade_time_ms: 250
