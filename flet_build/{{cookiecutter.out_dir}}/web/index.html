@@ -34,6 +34,14 @@
   <link rel="manifest" href="manifest.json">
 
   <script>
+    var webRenderer = "canvaskit";
+    var useColorEmoji = false;
+    var pythonModuleName = "main";
+  </script>
+
+  <script src="python.js"></script>
+
+  <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = null;
   </script>
@@ -50,7 +58,10 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function (engineInitializer) {
-          engineInitializer.initializeEngine().then(function (appRunner) {
+          engineInitializer.initializeEngine({
+            renderer: webRenderer,
+            useColorEmoji: useColorEmoji,
+          }).then(function (appRunner) {
             appRunner.runApp();
           });
         }
