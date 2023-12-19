@@ -18,7 +18,7 @@ void main() async {
   }
 
   String pageUrl = "";
-  String? appDir;
+  String assetsDir = "";
 
   if (kIsWeb) {
     // web mode - connect via HTTP
@@ -29,10 +29,12 @@ void main() async {
     }
   } else {
     // extract app from asset
-    appDir = await extractAssetZip("app/app.zip");
+    var appDir = await extractAssetZip("app/app.zip");
 
     // set current directory to app path
     Directory.current = appDir;
+
+    assetsDir = path.join(appDir, "assets");
 
     var environmentVariables = {
       "FLET_PLATFORM": defaultTargetPlatform.name.toLowerCase()
@@ -55,7 +57,7 @@ void main() async {
 
   runApp(FletApp(
     pageUrl: pageUrl,
-    assetsDir: kIsWeb ? "" : path.join(appDir!, "assets"),
+    assetsDir: assetsDir,
     hideLoadingPage: bool.tryParse(
         "{{ cookiecutter.hide_loading_animation }}".toLowerCase()),
   ));
