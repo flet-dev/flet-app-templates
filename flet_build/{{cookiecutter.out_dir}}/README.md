@@ -21,6 +21,9 @@
 
 ## Splash screens
 
-* iOS - `assets/splash_ios.png` (or any supported image format). Defaults to `assets/icon.png`.
-* Android - `assets/splash_android.png` (or any supported image format). Defaults to `assets/icon.png`.
-* Android - `assets/splash_web.png` (or any supported image format). Defaults to `assets/icon.png`.
+* iOS (light) - `assets/splash_ios.png` (or any supported image format). Defaults to `assets/splash.png` and then `assets/icon.png`.
+* iOS (dark) - `assets/splash_dark_ios.png` (or any supported image format). Defaults to light iOS splash, then to `assets/splash_dark.png`, then to `assets/splash.png` and then `assets/icon.png`.
+* Android (light) - `assets/splash_android.png` (or any supported image format). Defaults to `assets/splash.png` and then `assets/icon.png`.
+* Android (dark) - `assets/splash_dark_android.png` (or any supported image format).  Defaults to light Android splash, then to `assets/splash_dark.png`, then to `assets/splash.png` and then `assets/icon.png`.
+* Web (light) - `assets/splash_web.png` (or any supported image format). Defaults to `assets/splash.png` and then `assets/icon.png`.
+* Web (dark) - `assets/splash_dark_web.png` (or any supported image format). Defaults to light web splash, then `assets/splash_dark.png`, then to `assets/splash.png` and then `assets/icon.png`.
