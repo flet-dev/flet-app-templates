@@ -17,17 +17,8 @@ void main() async {
     debugPrint = (String? message, {int? wrapWidth}) => null;
   }
 
-  // extract app from asset
-  var appDir = await extractAssetZip("app/app.zip");
-
-  // set current directory to app path
-  Directory.current = appDir;
-
   String pageUrl = "";
-
-  var environmentVariables = {
-    "FLET_PLATFORM": defaultTargetPlatform.name.toLowerCase()
-  };
+  String? appDir;
 
   if (kIsWeb) {
     // web mode - connect via HTTP
@@ -36,25 +27,35 @@ void main() async {
     if (routeUrlStrategy == "path") {
       setPathUrlStrategy();
     }
-  } else if (defaultTargetPlatform == TargetPlatform.windows) {
-    // use TCP on Windows
-    var port = int.parse("{{ cookiecutter.windows_tcp_port }}");
-    pageUrl = "tcp://localhost:$port";
-    environmentVariables["FLET_SERVER_PORT"] = port.toString();
   } else {
-    // use UDS on other platforms
-    pageUrl = "flet.sock";
-    environmentVariables["FLET_SERVER_UDS_PATH"] = pageUrl;
-  }
+    // extract app from asset
+    appDir = await extractAssetZip("app/app.zip");
 
-  if (!kIsWeb) {
+    // set current directory to app path
+    Directory.current = appDir;
+
+    var environmentVariables = {
+      "FLET_PLATFORM": defaultTargetPlatform.name.toLowerCase()
+    };
+
+    if (defaultTargetPlatform == TargetPlatform.windows) {
+      // use TCP on Windows
+      var port = int.parse("{{ cookiecutter.windows_tcp_port }}");
+      pageUrl = "tcp://localhost:$port";
+      environmentVariables["FLET_SERVER_PORT"] = port.toString();
+    } else {
+      // use UDS on other platforms
+      pageUrl = "flet.sock";
+      environmentVariables["FLET_SERVER_UDS_PATH"] = pageUrl;
+    }
+
     SeriousPython.runProgram(path.join(appDir, "main.pyc"),
         environmentVariables: environmentVariables);
   }
 
   runApp(FletApp(
     pageUrl: pageUrl,
-    assetsDir: kIsWeb ? "" : path.join(appDir, "assets"),
+    assetsDir: kIsWeb ? "" : path.join(appDir!, "assets"),
     hideLoadingPage: bool.tryParse(
         "{{ cookiecutter.hide_loading_animation }}".toLowerCase()),
   ));

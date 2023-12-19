@@ -10,7 +10,7 @@ self.initPyodide = async function () {
     flet_js.documentUrl = documentUrl;
     await self.pyodide.runPythonAsync(`
     from pyodide.http import pyfetch
-    response = await pyfetch("assets/app.zip")
+    response = await pyfetch("assets/app/app.zip")
     await response.unpack_archive()
   `);
     pyodide.pyimport(self.pythonModuleName);
