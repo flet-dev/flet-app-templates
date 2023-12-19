@@ -10,5 +10,8 @@
     "windows_tcp_port": 63777,
     "hide_loading_animation": true,
     "hide_splash_screen": false,
-    "base_href": "/"
+    "base_url": "/",
+    "route_url_strategy": "path",
+    "web_renderer": "canvaskit",
+    "use_color_emoji": "false"
 }
