@@ -9,9 +9,11 @@ self.initPyodide = async function () {
     self.pyodide.registerJsModule("flet_js", flet_js);
     flet_js.documentUrl = documentUrl;
     await self.pyodide.runPythonAsync(`
+    import sys
     from pyodide.http import pyfetch
     response = await pyfetch("assets/app/app.zip")
     await response.unpack_archive()
+    sys.path.append("__pypackages__")
   `);
     pyodide.pyimport(self.pythonModuleName);
     await self.flet_js.start_connection(self.receiveCallback);
