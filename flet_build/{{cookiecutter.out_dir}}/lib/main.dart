@@ -10,12 +10,32 @@ import 'package:url_strategy/url_strategy.dart';
 const bool isProduction = bool.fromEnvironment('dart.vm.product');
 
 void main() async {
-  await setupDesktop();
-
   if (isProduction) {
     // ignore: avoid_returning_null_for_void
     debugPrint = (String? message, {int? wrapWidth}) => null;
   }
+
+  runApp(FutureBuilder(
+      future: prepareApp(),
+      builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
+        if (snapshot.hasData) {
+          return FletApp(
+            pageUrl: snapshot.data![0],
+            assetsDir: snapshot.data![1],
+            hideLoadingPage: bool.tryParse(
+                "{{ cookiecutter.hide_loading_animation }}".toLowerCase()),
+          );
+        } else if (snapshot.hasError) {
+          return Text('Error loading Flet app: ${snapshot.error}');
+        } else {
+          // loading
+          return const SizedBox.shrink();
+        }
+      }));
+}
+
+Future<List<String>> prepareApp() async {
+  await setupDesktop();
 
   String pageUrl = "";
   String assetsDir = "";
@@ -55,10 +75,5 @@ void main() async {
         environmentVariables: environmentVariables);
   }
 
-  runApp(FletApp(
-    pageUrl: pageUrl,
-    assetsDir: assetsDir,
-    hideLoadingPage: bool.tryParse(
-        "{{ cookiecutter.hide_loading_animation }}".toLowerCase()),
-  ));
+  return [pageUrl, assetsDir];
 }
