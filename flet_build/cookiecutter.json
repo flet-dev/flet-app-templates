@@ -10,7 +10,6 @@
     "kotlin_dir": "{{ cookiecutter.org_name.replace('.', cookiecutter.sep) }}{{ cookiecutter.sep }}{{ cookiecutter.project_name }}{{ cookiecutter.sep }}",
     "windows_tcp_port": 63777,
     "hide_loading_animation": true,
-    "hide_splash_screen": false,
     "base_url": "/",
     "route_url_strategy": "path",
     "web_renderer": "canvaskit",
