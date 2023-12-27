@@ -1,5 +1,6 @@
 {
     "out_dir": "",
+    "python_module_name": "main",
     "project_name": "",
     "project_description": "",
     "product_name": "{{ cookiecutter.project_name }}",

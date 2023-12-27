@@ -71,7 +71,8 @@ Future<List<String>> prepareApp() async {
       environmentVariables["FLET_SERVER_UDS_PATH"] = pageUrl;
     }
 
-    SeriousPython.runProgram(path.join(appDir, "main.pyc"),
+    SeriousPython.runProgram(
+        path.join(appDir, "{{ cookiecutter.python_module_name }}.pyc"),
         environmentVariables: environmentVariables);
   }
 
