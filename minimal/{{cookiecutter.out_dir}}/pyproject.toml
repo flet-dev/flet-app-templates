@@ -1,0 +1,9 @@
+[project]
+
+name = "{{cookiecutter.project_name}}"
+version = "1.0.0"
+description = "{{cookiecutter.description}}"
+authors = [
+  {name = "Flet Developer", email = "your@email.com"}
+]
+dependencies = ["flet==0.25.0.dev3526"]
