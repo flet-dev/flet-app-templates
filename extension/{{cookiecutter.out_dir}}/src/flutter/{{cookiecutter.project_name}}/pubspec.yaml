@@ -12,7 +12,7 @@ dependencies:
   flet: 
     git:
       url: https://github.com/flet-dev/flet.git
-      ref: feodor/flutter-extensions
+      ref: main
       path: packages/flet
   flutter:
     sdk: flutter
