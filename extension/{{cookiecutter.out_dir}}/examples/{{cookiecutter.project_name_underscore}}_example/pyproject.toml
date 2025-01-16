@@ -1,5 +1,5 @@
 [project]
-name = "{{cookiecutter.project_name}}_example"
+name = "{{cookiecutter.project_name}}-example"
 version = "1.0.0"
 description = ""
 readme = "README.md"
@@ -17,7 +17,7 @@ org = "com.mycompany"
 
 # project display name that is used as an app title on Android and iOS home screens,
 # shown in window titles and about app dialogs on desktop.
-product = "{{cookiecutter.project_name}}_example"
+product = "{{cookiecutter.project_name}}-example"
 
 # company name to display in about app dialogs
 company = "Flet"

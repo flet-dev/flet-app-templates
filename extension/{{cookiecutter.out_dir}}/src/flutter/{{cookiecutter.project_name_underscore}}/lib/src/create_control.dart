@@ -1,10 +1,10 @@
 import 'package:flet/flet.dart';
 
-import '{{cookiecutter.project_name}}.dart';
+import '{{cookiecutter.project_name_underscore}}.dart';
 
 CreateControlFactory createControl = (CreateControlArgs args) {
   switch (args.control.type) {
-    case "{{cookiecutter.project_name}}":
+    case "{{cookiecutter.project_name_underscore}}":
       return {{cookiecutter.control_name}}Control(
         parent: args.parent,
         control: args.control,

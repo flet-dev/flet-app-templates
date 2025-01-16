@@ -18,7 +18,7 @@ Repository = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}"
 Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issues"
 
 [tool.setuptools.package-data]
-"flutter.{{cookiecutter.project_name}}" = ["**/*"]
+"flutter.{{cookiecutter.project_name_underscore}}" = ["**/*"]
 
 [tool.uv]
 dev-dependencies = [

@@ -49,7 +49,7 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
         self.value = value
 
     def _get_control_name(self):
-        return "{{cookiecutter.project_name}}"
+        return "{{cookiecutter.project_name_underscore}}"
 
     # color
     @property
