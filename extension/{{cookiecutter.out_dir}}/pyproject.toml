@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Flet contributors", email = "hello@myemail.dev" }
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
     "flet>={{cookiecutter.flet_version}}",
 ]

@@ -3,7 +3,7 @@ name = "{{cookiecutter.project_name}}-example"
 version = "1.0.0"
 description = ""
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
   "{{cookiecutter.project_name}} @ file:{{cookiecutter.sep}}{{cookiecutter.sep}}{{cookiecutter._output_dir}}{{cookiecutter.sep}}{{cookiecutter.out_dir}}",
   "flet>={{cookiecutter.flet_version}}",
