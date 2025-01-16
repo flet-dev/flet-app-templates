@@ -1,6 +1,7 @@
 {
     "out_dir": "",
-    "project_name": "{{cookiecutter.project_name.replace('-','_')}}",
+    "project_name": "",
+    "project_name_underscore": "{{cookiecutter.project_name.replace('-','_')}}",
     "flet_version": "",
     "package_manager": "",
     "description": "",
