@@ -1,0 +1,24 @@
+name: {{cookiecutter.project_name}}
+description: Flet {{cookiecutter.control_name}} control
+repository: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/src/flutter/{{cookiecutter.project_name}}
+version: 0.1.0
+homepage: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flet: 
+    git:
+      url: https://github.com/flet-dev/flet.git
+      ref: feodor/flutter-extensions
+      path: packages/flet
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  

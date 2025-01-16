@@ -1,0 +1,33 @@
+[project]
+name = "{{cookiecutter.project_name}}"
+version = "0.1.0"
+description = "{{cookiecutter.control_name}} control for Flet"
+readme = "README.md"
+authors = [
+    { name = "Flet contributors", email = "hello@myemail.dev" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "flet>={{cookiecutter.flet_version}}",
+]
+
+[project.urls]
+Homepage = "https://mydomain.dev"
+Documentation = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}"
+Repository = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}"
+Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issues"
+
+[tool.setuptools.package-data]
+"flutter.{{cookiecutter.project_name}}" = ["**/*"]
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]>={{cookiecutter.flet_version}}",
+]
+
+[tool.setuptools]
+license-files = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
