@@ -44,7 +44,7 @@ dev-dependencies = [
 {%- elif cookiecutter.package_manager == "poetry" %}
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 flet = {version = "{{cookiecutter.flet_version}}"}
 
 [tool.poetry.group.dev.dependencies]
