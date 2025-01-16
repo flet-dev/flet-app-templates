@@ -4,7 +4,7 @@ name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
 description = "{{cookiecutter.description}}"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
   "flet=={{cookiecutter.flet_version}}"
 ]
@@ -44,7 +44,7 @@ dev-dependencies = [
 {%- elif cookiecutter.package_manager == "poetry" %}
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 flet = {version = "{{cookiecutter.flet_version}}"}
 
 [tool.poetry.group.dev.dependencies]

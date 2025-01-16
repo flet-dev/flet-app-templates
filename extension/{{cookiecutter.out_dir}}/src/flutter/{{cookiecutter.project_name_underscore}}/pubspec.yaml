@@ -1,6 +1,6 @@
-name: {{cookiecutter.project_name}}
+name: {{cookiecutter.project_name_underscore}}
 description: Flet {{cookiecutter.control_name}} control
-repository: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/src/flutter/{{cookiecutter.project_name}}
+repository: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/src/flutter/{{cookiecutter.project_name_underscore}}
 version: 0.1.0
 homepage: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}
 

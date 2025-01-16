@@ -1,1 +1,0 @@
-from {{cookiecutter.project_name}}.{{cookiecutter.project_name}} import {{cookiecutter.control_name}}

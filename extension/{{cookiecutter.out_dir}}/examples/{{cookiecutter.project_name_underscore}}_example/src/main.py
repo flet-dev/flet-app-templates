@@ -1,6 +1,6 @@
 import flet as ft
 
-from {{cookiecutter.project_name}} import {{cookiecutter.control_name}}
+from {{cookiecutter.project_name_underscore}} import {{cookiecutter.control_name}}
 
 
 def main(page: ft.Page):
