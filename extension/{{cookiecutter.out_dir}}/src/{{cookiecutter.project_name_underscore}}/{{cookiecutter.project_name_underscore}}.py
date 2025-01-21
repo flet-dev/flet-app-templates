@@ -43,6 +43,7 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
             top=top,
             right=right,
             bottom=bottom,
+            color=color
         )
 
         #self.color = color
