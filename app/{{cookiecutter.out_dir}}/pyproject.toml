@@ -29,18 +29,10 @@ copyright = "Copyright (C) 2025 by Flet"
 [tool.flet.app]
 path = "src"
 
-{%- if cookiecutter.package_manager == "uv" %}
-
 [tool.uv]
 dev-dependencies = [
     "flet[all]=={{cookiecutter.flet_version}}",
 ]
-{%- elif cookiecutter.package_manager == "poetry" %}
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-{% endif %}
