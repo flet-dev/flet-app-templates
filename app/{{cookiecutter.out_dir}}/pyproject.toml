@@ -1,21 +1,15 @@
-{%- if cookiecutter.package_manager != "poetry" -%}
 [project]
 name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
 description = "{{cookiecutter.description}}"
 readme = "README.md"
 requires-python = ">=3.9"
+authors = [
+    { name = "Flet developer", email = "you@example.com" }
+]
 dependencies = [
   "flet=={{cookiecutter.flet_version}}"
 ]
-{% else %}
-[tool.poetry]
-name = "{{cookiecutter.project_name}}"
-version = "0.1.0"
-description = "{{cookiecutter.description}}"
-authors = ["Flet Developer <your@email.com>"]
-readme = "README.md"
-{% endif %}
 
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
@@ -35,22 +29,13 @@ copyright = "Copyright (C) 2025 by Flet"
 [tool.flet.app]
 path = "src"
 
-{%- if cookiecutter.package_manager == "uv" %}
-
 [tool.uv]
 dev-dependencies = [
     "flet[all]=={{cookiecutter.flet_version}}",
 ]
-{%- elif cookiecutter.package_manager == "poetry" %}
 
-[tool.poetry.dependencies]
-python = "^3.9"
-flet = {version = "{{cookiecutter.flet_version}}"}
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-{% endif %}
