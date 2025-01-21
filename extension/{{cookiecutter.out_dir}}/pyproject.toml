@@ -3,10 +3,10 @@ name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
 description = "{{cookiecutter.control_name}} control for Flet"
 readme = "README.md"
-authors = [
-    { name = "Flet contributors", email = "hello@myemail.dev" }
-]
 requires-python = ">=3.9"
+authors = [
+    { name = "Flet contributors", email = "you@example.com" }
+]
 dependencies = [
     "flet>={{cookiecutter.flet_version}}",
 ]
@@ -20,10 +20,17 @@ Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issue
 [tool.setuptools.package-data]
 "flutter.{{cookiecutter.project_name_underscore}}" = ["**/*"]
 
+{%- if cookiecutter.package_manager == "uv" %}
+
 [tool.uv]
 dev-dependencies = [
-    "flet[all]>={{cookiecutter.flet_version}}",
+    "flet[all]=={{cookiecutter.flet_version}}",
 ]
+{%- elif cookiecutter.package_manager == "poetry" %}
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
+{% endif %}
 
 [tool.setuptools]
 license-files = []
