@@ -13,9 +13,8 @@ class {{cookiecutter.control_name}}Control extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var color = control.attrColor("color", context);
     String text = control.attrString("value", "")!;
-    Widget myControl = Text(text, style: TextStyle(color: color),);
+    Widget myControl = Text(text);
 
 
     return constrainedControl(context, myControl, parent, control);
