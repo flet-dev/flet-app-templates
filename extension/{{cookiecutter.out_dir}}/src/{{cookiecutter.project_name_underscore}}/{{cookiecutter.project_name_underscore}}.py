@@ -3,8 +3,6 @@ from typing import Any, Optional
 
 from flet.core.constrained_control import ConstrainedControl
 from flet.core.control import OptionalNumber
-from flet.core.types import ColorEnums, ColorValue
-
 
 class {{cookiecutter.control_name}}(ConstrainedControl):
     """
@@ -30,7 +28,6 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
         #
         # {{cookiecutter.control_name}} specific
         #
-        color: Optional[ColorValue] = None,
         value: Optional[str] = None,
     ):
         ConstrainedControl.__init__(
@@ -43,7 +40,6 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
             top=top,
             right=right,
             bottom=bottom,
-            color=color
         )
 
         #self.color = color
@@ -51,16 +47,6 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
 
     def _get_control_name(self):
         return "{{cookiecutter.project_name_underscore}}"
-
-    # color
-    @property
-    def color(self) -> Optional[ColorValue]:
-        return self.__color
-
-    @color.setter
-    def color(self, value: Optional[ColorValue]):
-        self.__color = value
-        self._set_enum_attr("color", value, ColorEnums)
 
     # value
     @property
