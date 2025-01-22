@@ -42,7 +42,6 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
             bottom=bottom,
         )
 
-        #self.color = color
         self.value = value
 
     def _get_control_name(self):
