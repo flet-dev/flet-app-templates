@@ -20,17 +20,13 @@ Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issue
 [tool.setuptools.package-data]
 "flutter.{{cookiecutter.project_name_underscore}}" = ["**/*"]
 
-{%- if cookiecutter.package_manager == "uv" %}
-
 [tool.uv]
 dev-dependencies = [
     "flet[all]=={{cookiecutter.flet_version}}",
 ]
-{%- elif cookiecutter.package_manager == "poetry" %}
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-{% endif %}
 
 [tool.setuptools]
 license-files = []
