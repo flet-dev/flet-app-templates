@@ -3,7 +3,6 @@
     "project_name": "",
     "project_name_underscore": "{{cookiecutter.project_name.replace('-','_')}}",
     "flet_version": "",
-    "package_manager": "",
     "description": "",
     "control_name": "{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}",
     "sep": "/"
