@@ -9,11 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  flet: 
-    git:
-      url: https://github.com/flet-dev/flet.git
-      ref: main
-      path: packages/flet
+  flet: 0.26.0
   flutter:
     sdk: flutter
 
