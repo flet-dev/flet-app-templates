@@ -2,5 +2,6 @@
     "out_dir": "",
     "project_name": "",
     "flet_version": "",
-    "description": ""
+    "description": "",
+    "app_display_name": "{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}"
 }

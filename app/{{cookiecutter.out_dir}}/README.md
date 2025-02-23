@@ -1,4 +1,4 @@
-# {{ cookiecutter.control_name }} app
+# {{ cookiecutter.app_display_name }} app
 
 ## Run the app
 
