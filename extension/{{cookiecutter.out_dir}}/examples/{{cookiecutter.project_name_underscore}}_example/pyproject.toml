@@ -8,7 +8,7 @@ authors = [
     { name = "Flet developer", email = "you@example.com" }
 ]
 dependencies = [
-  "{{cookiecutter.project_name}} @ file://{{(cookiecutter._output_dir + cookiecutter.sep + cookiecutter.out_dir).replace('\\','\\\\')}}",
+  "{{cookiecutter.project_name}}",
   "flet>={{cookiecutter.flet_version}}",
 ]
 
@@ -30,10 +30,17 @@ copyright = "Copyright (C) 2025 by MyCompany"
 [tool.flet.app]
 path = "src"
 
+[tool.flet.dev_packages]
+{{cookiecutter.project_name}} = "..{{cookiecutter.sep}}.." # relative path
+
 [tool.uv]
 dev-dependencies = [
     "flet[all]=={{cookiecutter.flet_version}}",
 ]
 
+[tool.uv.sources]
+{{cookiecutter.project_name}} = { path = "..{{cookiecutter.sep}}..{{cookiecutter.sep}}", editable = true }
+
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
+{{cookiecutter.project_name}} = {path = "..{{cookiecutter.sep}}..{{cookiecutter.sep}}", develop = true}
