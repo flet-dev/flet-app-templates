@@ -31,7 +31,7 @@ copyright = "Copyright (C) 2025 by MyCompany"
 path = "src"
 
 [tool.flet.dev_packages]
-{{cookiecutter.project_name}} = "../.." # relative path
+{{cookiecutter.project_name}} = "..{{cookiecutter.sep}}.." # relative path
 
 [tool.uv]
 dev-dependencies = [
