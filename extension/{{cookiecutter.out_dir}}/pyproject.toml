@@ -30,9 +30,9 @@ dev-dependencies = [
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-mkdocs = "^1.0"
-mkdocstrings = { extras = ["python"], version = "^0.10" }
-mkdocs-material = "^8.0"
+mkdocs = "*"
+mkdocstrings = { extras = ["python"], version = "*" }
+mkdocs-material = "*"
 
 [tool.setuptools]
 license-files = []
