@@ -5,9 +5,24 @@
 
 Add dependency to `pyproject.toml` of your Flet app:
 
+* **Git dependency**
+
+Link to git repository:
+
 ```
 dependencies = [
-  "{{cookiecutter.project_name}} @ git+<link to GitHub repository>",
+  "{{cookiecutter.project_name}} @ git+https://github.com/MyGithubAccount/{{cookiecutter.project_name}}",
+  "flet>={{cookiecutter.flet_version}}",
+]
+```
+
+* **PyPi dependency**  
+
+If the package is published on pypi.org:
+
+```
+dependencies = [
+  "f{{cookiecutter.project_name}}",
   "flet>={{cookiecutter.flet_version}}",
 ]
 ```
@@ -17,4 +32,6 @@ Build your app:
 flet build macos -v
 ```
 
-TODO: Add your control documentation here.
+## Documentation
+
+[Link to documentation](https://MyGithubAccount.github.io/{{cookiecutter.project_name}}/)

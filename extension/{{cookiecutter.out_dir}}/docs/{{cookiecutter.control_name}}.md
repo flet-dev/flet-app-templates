@@ -1,1 +1,0 @@
-:::src.{{cookiecutter.project_name_underscore}}.{{cookiecutter.control_name}}

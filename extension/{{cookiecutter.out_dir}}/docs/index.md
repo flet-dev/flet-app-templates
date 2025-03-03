@@ -22,6 +22,6 @@ flet build macos -v
 
 ## Classes
 
-[{{cookiecutter.control_name.lower()}}]({{cookiecutter.control_name}}.md)
+[{{cookiecutter.control_name}}]({{cookiecutter.control_name.lower()}}.md)
 
 
