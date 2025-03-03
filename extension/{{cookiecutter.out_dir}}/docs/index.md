@@ -1,5 +1,6 @@
-# {{cookiecutter.project_name}}
-{{cookiecutter.control_name}} control for Flet
+# Introduction
+
+{{cookiecutter.control_name}} for Flet.
 
 ## Installation
 
@@ -17,4 +18,10 @@ Build your app:
 flet build macos -v
 ```
 
-TODO: Add your control documentation here.
+## Examples
+
+## Classes
+
+[{{cookiecutter.control_name}}](/docs/{{cookiecutter.control_name}}.md)
+
+
