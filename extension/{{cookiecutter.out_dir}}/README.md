@@ -22,7 +22,7 @@ If the package is published on pypi.org:
 
 ```
 dependencies = [
-  "f{{cookiecutter.project_name}}",
+  "{{cookiecutter.project_name}}",
   "flet>={{cookiecutter.flet_version}}",
 ]
 ```
