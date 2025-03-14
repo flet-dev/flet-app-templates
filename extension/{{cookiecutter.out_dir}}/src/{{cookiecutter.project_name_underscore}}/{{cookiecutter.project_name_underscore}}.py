@@ -6,7 +6,7 @@ from flet.core.control import OptionalNumber
 
 class {{cookiecutter.control_name}}(ConstrainedControl):
     """
-    {{cookiecutter.control_name}} Control.
+    {{cookiecutter.control_name}} Control description.
     """
 
     def __init__(
@@ -50,6 +50,9 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
     # value
     @property
     def value(self):
+        """
+        Value property description.
+        """
         return self._get_attr("value")
 
     @value.setter

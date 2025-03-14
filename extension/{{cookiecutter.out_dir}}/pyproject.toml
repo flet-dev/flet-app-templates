@@ -23,10 +23,16 @@ Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issue
 [tool.uv]
 dev-dependencies = [
     "flet[all]=={{cookiecutter.flet_version}}",
+    "mkdocs", 
+    "mkdocs-material",
+    "mkdocstrings[python]"
 ]
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
+mkdocs = "*"
+mkdocstrings = { extras = ["python"], version = "*" }
+mkdocs-material = "*"
 
 [tool.setuptools]
 license-files = []
