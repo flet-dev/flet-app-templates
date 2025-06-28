@@ -14,13 +14,13 @@ def main(page: ft.Page):
     )
     page.add(
         ft.SafeArea(
-            ft.Container(
-                counter,
-                alignment=ft.alignment.center,
-            ),
             expand=True,
+            content=ft.Container(
+                content=counter,
+                alignment=ft.Alignment.center(),
+            ),
         )
     )
 
 
-ft.app(main)
+ft.run(main)

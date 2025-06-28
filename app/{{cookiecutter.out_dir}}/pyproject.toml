@@ -12,18 +12,10 @@ dependencies = [
 ]
 
 [tool.flet]
-# org name in reverse domain name notation, e.g. "com.mycompany".
-# Combined with project.name to build bundle ID for iOS and Android apps
+# Docs: https://flet.dev/docs/publish
 org = "com.mycompany"
-
-# project display name that is used as an app title on Android and iOS home screens,
-# shown in window titles and about app dialogs on desktop.
 product = "{{cookiecutter.project_name}}"
-
-# company name to display in about app dialogs
 company = "Flet"
-
-# copyright text to display in about app dialogs
 copyright = "Copyright (C) 2025 by Flet"
 
 [tool.flet.app]
