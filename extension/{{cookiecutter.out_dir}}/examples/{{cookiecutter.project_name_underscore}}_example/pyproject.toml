@@ -31,7 +31,7 @@ copyright = "Copyright (C) 2025 by MyCompany"
 path = "src"
 
 [tool.flet.dev_packages]
-{{cookiecutter.project_name}} = "..{{cookiecutter.sep}}.." # relative path
+{{cookiecutter.project_name}} = "..{{cookiecutter.quoted_sep}}.." # relative path
 
 [tool.uv]
 dev-dependencies = [
@@ -39,8 +39,8 @@ dev-dependencies = [
 ]
 
 [tool.uv.sources]
-{{cookiecutter.project_name}} = { path = "..{{cookiecutter.sep}}..{{cookiecutter.sep}}", editable = true }
+{{cookiecutter.project_name}} = { path = "..{{cookiecutter.quoted_sep}}..{{cookiecutter.quoted_sep}}", editable = true }
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-{{cookiecutter.project_name}} = {path = "..{{cookiecutter.sep}}..{{cookiecutter.sep}}", develop = true}
+{{cookiecutter.project_name}} = {path = "..{{cookiecutter.quoted_sep}}..{{cookiecutter.quoted_sep}}", develop = true}
