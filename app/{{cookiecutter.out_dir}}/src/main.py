@@ -17,7 +17,7 @@ def main(page: ft.Page):
             expand=True,
             content=ft.Container(
                 content=counter,
-                alignment=ft.Alignment.center(),
+                alignment=ft.Alignment.CENTER,
             ),
         )
     )

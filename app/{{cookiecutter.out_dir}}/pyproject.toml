@@ -11,6 +11,11 @@ dependencies = [
   "flet=={{cookiecutter.flet_version}}"
 ]
 
+[dependency-groups]
+dev = [
+  "flet[all]=={{cookiecutter.flet_version}}",
+]
+
 [tool.flet]
 # Docs: https://flet.dev/docs/publish
 org = "com.mycompany"
@@ -20,14 +25,3 @@ copyright = "Copyright (C) 2025 by Flet"
 
 [tool.flet.app]
 path = "src"
-
-[tool.uv]
-dev-dependencies = [
-    "flet[all]=={{cookiecutter.flet_version}}",
-]
-
-[tool.poetry]
-package-mode = false
-
-[tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
