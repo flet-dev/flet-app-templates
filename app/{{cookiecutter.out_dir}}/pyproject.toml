@@ -17,7 +17,7 @@ dev = [
 ]
 
 [tool.flet]
-# Docs: https://flet.dev/docs/publish
+# Docs: https://docs.flet.dev/publish
 org = "com.mycompany"
 product = "{{cookiecutter.project_name}}"
 company = "Flet"
