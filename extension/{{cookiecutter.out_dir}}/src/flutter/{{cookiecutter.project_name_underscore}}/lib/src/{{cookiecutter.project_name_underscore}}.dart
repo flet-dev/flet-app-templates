@@ -2,21 +2,18 @@ import 'package:flet/flet.dart';
 import 'package:flutter/material.dart';
 
 class {{cookiecutter.control_name}}Control extends StatelessWidget {
-  final Control? parent;
   final Control control;
 
   const {{cookiecutter.control_name}}Control({
     super.key,
-    required this.parent,
     required this.control,
   });
 
   @override
   Widget build(BuildContext context) {
-    String text = control.attrString("value", "")!;
+    String text = control.getString("value", "")!;
     Widget myControl = Text(text);
 
-
-    return constrainedControl(context, myControl, parent, control);
+    return ConstrainedControl(control: control, child: myControl);
   }
 }

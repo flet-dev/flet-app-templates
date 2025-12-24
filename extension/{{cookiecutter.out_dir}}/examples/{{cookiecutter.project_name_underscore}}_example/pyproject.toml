@@ -9,7 +9,7 @@ authors = [
 ]
 dependencies = [
   "{{cookiecutter.project_name}}",
-  "flet>={{cookiecutter.flet_version}}",
+  "flet=={{cookiecutter.flet_version}}",
 ]
 
 [dependency-groups]
@@ -30,7 +30,7 @@ product = "{{cookiecutter.project_name}}-example"
 company = "Flet"
 
 # copyright text to display in about app dialogs
-copyright = "Copyright (C) 2025 by MyCompany"
+copyright = "Copyright (C) 2026 by MyCompany"
 
 [tool.flet.app]
 path = "src"
