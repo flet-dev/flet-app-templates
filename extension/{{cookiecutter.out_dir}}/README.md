@@ -16,7 +16,7 @@ dependencies = [
 ]
 ```
 
-* **PyPi dependency**  
+* **uv/pip dependency**  
 
 If the package is published on pypi.org:
 

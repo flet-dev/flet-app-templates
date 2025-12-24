@@ -11,6 +11,14 @@ dependencies = [
     "flet>={{cookiecutter.flet_version}}",
 ]
 
+[dependency-groups]
+dev = [
+    "flet[all]=={{cookiecutter.flet_version}}",
+    "mkdocs", 
+    "mkdocs-material",
+    "mkdocstrings[python]"
+]
+
 [project.urls]
 Homepage = "https://mydomain.dev"
 Documentation = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}"
@@ -19,20 +27,6 @@ Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issue
 
 [tool.setuptools.package-data]
 "flutter.{{cookiecutter.project_name_underscore}}" = ["**/*"]
-
-[tool.uv]
-dev-dependencies = [
-    "flet[all]=={{cookiecutter.flet_version}}",
-    "mkdocs", 
-    "mkdocs-material",
-    "mkdocstrings[python]"
-]
-
-[tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-mkdocs = "*"
-mkdocstrings = { extras = ["python"], version = "*" }
-mkdocs-material = "*"
 
 [tool.setuptools]
 license-files = []

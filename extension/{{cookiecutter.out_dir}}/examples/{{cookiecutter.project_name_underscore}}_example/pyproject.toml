@@ -12,6 +12,11 @@ dependencies = [
   "flet>={{cookiecutter.flet_version}}",
 ]
 
+[dependency-groups]
+dev = [
+  "flet[all]=={{cookiecutter.flet_version}}",
+]
+
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
 # Combined with project.name to build bundle ID for iOS and Android apps
@@ -33,14 +38,5 @@ path = "src"
 [tool.flet.dev_packages]
 {{cookiecutter.project_name}} = "..{{cookiecutter.sep}}.." # relative path
 
-[tool.uv]
-dev-dependencies = [
-    "flet[all]=={{cookiecutter.flet_version}}",
-]
-
 [tool.uv.sources]
 {{cookiecutter.project_name}} = { path = "..{{cookiecutter.sep}}..{{cookiecutter.sep}}", editable = true }
-
-[tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
-{{cookiecutter.project_name}} = {path = "..{{cookiecutter.sep}}..{{cookiecutter.sep}}", develop = true}

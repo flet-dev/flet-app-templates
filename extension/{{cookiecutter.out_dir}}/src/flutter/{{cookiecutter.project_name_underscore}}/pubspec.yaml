@@ -1,8 +1,7 @@
 name: {{cookiecutter.project_name_underscore}}
 description: Flet {{cookiecutter.control_name}} control
-repository: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/src/flutter/{{cookiecutter.project_name_underscore}}
 version: 0.1.0
-homepage: https://github.com/MyGithubAccount/{{cookiecutter.project_name}}
+publish_to: none
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -12,6 +11,8 @@ dependencies:
   flet: {{cookiecutter.flet_version}}
   flutter:
     sdk: flutter
+
+  # your dependencies here
 
 dev_dependencies:
   flutter_test:

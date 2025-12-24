@@ -17,11 +17,10 @@ dev = [
 ]
 
 [tool.flet]
-# Docs: https://flet.dev/docs/publish
 org = "com.mycompany"
 product = "{{cookiecutter.project_name}}"
 company = "Flet"
-copyright = "Copyright (C) 2025 by Flet"
+copyright = "Copyright (C) 2026 by Flet"
 
 [tool.flet.app]
 path = "src"
