@@ -8,12 +8,12 @@ authors = [
     { name = "Flet developer", email = "you@example.com" }
 ]
 dependencies = [
-  "flet=={{cookiecutter.flet_version}}"
+  "flet>={{cookiecutter.flet_version}}"
 ]
 
 [dependency-groups]
 dev = [
-  "flet[all]=={{cookiecutter.flet_version}}",
+  "flet[all]>={{cookiecutter.flet_version}}",
 ]
 
 [tool.flet]

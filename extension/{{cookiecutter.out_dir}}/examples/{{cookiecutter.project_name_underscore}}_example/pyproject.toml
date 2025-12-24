@@ -9,12 +9,12 @@ authors = [
 ]
 dependencies = [
   "{{cookiecutter.project_name}}",
-  "flet=={{cookiecutter.flet_version}}",
+  "flet>={{cookiecutter.flet_version}}",
 ]
 
 [dependency-groups]
 dev = [
-  "flet[all]=={{cookiecutter.flet_version}}",
+  "flet[all]>={{cookiecutter.flet_version}}",
 ]
 
 [tool.flet]
