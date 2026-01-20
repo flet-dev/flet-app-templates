@@ -1,4 +1,5 @@
 import 'package:flet/flet.dart';
+import 'package:flutter/widgets.dart';
 
 import '{{cookiecutter.project_name_underscore}}.dart';
 
