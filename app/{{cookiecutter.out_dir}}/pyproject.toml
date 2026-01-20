@@ -14,11 +14,11 @@ dependencies = [
 [dependency-groups]
 dev = [
     "flet-cli>={{cookiecutter.flet_version}}",
-{% if cookiecutter.platform == "linux" %}
+{%- if cookiecutter.platform == "linux" %}
     "flet-desktop-light>={{cookiecutter.flet_version}}",
-{% else %}
+{%- else %}
     "flet-desktop>={{cookiecutter.flet_version}}",
-{% endif %}
+{%- endif %}
     "flet-web>={{cookiecutter.flet_version}}",
 ]
 
