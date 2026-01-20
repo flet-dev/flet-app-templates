@@ -13,7 +13,9 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "flet[all]>={{cookiecutter.flet_version}}",
+    "flet-cli>={{cookiecutter.flet_version}}",
+    "flet-desktop>={{cookiecutter.flet_version}}",
+    "flet-web>={{cookiecutter.flet_version}}",
     "mkdocs", 
     "mkdocs-material",
     "mkdocstrings[python]"

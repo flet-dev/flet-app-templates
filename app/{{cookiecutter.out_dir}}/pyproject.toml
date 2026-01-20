@@ -8,19 +8,21 @@ authors = [
     { name = "Flet developer", email = "you@example.com" }
 ]
 dependencies = [
-  "flet>={{cookiecutter.flet_version}}"
+    "flet>={{cookiecutter.flet_version}}"
 ]
 
 [dependency-groups]
 dev = [
-  "flet[all]>={{cookiecutter.flet_version}}",
+    "flet-cli>={{cookiecutter.flet_version}}",
+    "flet-desktop>={{cookiecutter.flet_version}}",
+    "flet-web>={{cookiecutter.flet_version}}",
 ]
 
 [tool.flet]
 org = "com.mycompany"
 product = "{{cookiecutter.project_name}}"
 company = "Flet"
-copyright = "Copyright (C) 2026 by Flet"
+copyright = "Copyright (C) 2023-2026 by Flet"
 
 [tool.flet.app]
 path = "src"
