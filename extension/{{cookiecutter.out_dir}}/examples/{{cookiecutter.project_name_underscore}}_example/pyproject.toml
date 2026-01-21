@@ -8,13 +8,19 @@ authors = [
     { name = "Flet developer", email = "you@example.com" }
 ]
 dependencies = [
-  "{{cookiecutter.project_name}}",
-  "flet>={{cookiecutter.flet_version}}",
+    "{{cookiecutter.project_name}}",
+    "flet>={{cookiecutter.flet_version}}",
 ]
 
 [dependency-groups]
 dev = [
-  "flet[all]>={{cookiecutter.flet_version}}",
+    "flet-cli>={{cookiecutter.flet_version}}",
+{%- if cookiecutter.platform == "linux" %}
+    "flet-desktop-light>={{cookiecutter.flet_version}}",
+{%- else %}
+    "flet-desktop>={{cookiecutter.flet_version}}",
+{%- endif %}
+    "flet-web>={{cookiecutter.flet_version}}",
 ]
 
 [tool.flet]
