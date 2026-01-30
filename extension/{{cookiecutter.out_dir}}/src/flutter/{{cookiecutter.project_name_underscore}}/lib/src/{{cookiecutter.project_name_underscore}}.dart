@@ -14,6 +14,6 @@ class {{cookiecutter.control_name}}Control extends StatelessWidget {
     String text = control.getString("value", "")!;
     Widget myControl = Text(text);
 
-    return ConstrainedControl(control: control, child: myControl);
+    return LayoutControl(control: control, child: myControl);
   }
 }
