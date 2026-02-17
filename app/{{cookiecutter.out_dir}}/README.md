@@ -59,3 +59,11 @@ flet build windows -v
 ```
 
 For more details on building Windows package, refer to the [Windows Packaging Guide](https://docs.flet.dev/publish/windows/).
+
+### Web
+
+```bash
+flet build web -v
+```
+
+For more details on building Web app, refer to the [Web Packaging Guide](https://docs.flet.dev/publish/web/).
