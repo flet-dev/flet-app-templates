@@ -3,7 +3,7 @@ from typing import Any, Optional
 
 import flet as ft
 
-@ft.control("{{cookiecutter.project_name_underscore}}")
+@ft.control("{{cookiecutter.control_name}}")
 class {{cookiecutter.control_name}}(ft.LayoutControl):
     """
     {{cookiecutter.control_name}} Control description.
