@@ -14,15 +14,14 @@ dependencies = [
 [dependency-groups]
 dev = [
     "flet-cli>={{cookiecutter.flet_version}}",
-{%- if cookiecutter.platform == "linux" %}
-    "flet-desktop-light>={{cookiecutter.flet_version}}",
-{%- else %}
     "flet-desktop>={{cookiecutter.flet_version}}",
-{%- endif %}
     "flet-web>={{cookiecutter.flet_version}}",
 ]
 
 [tool.flet]
+{%- if cookiecutter.platform == "linux" %}
+desktop_flavor = "light"    # Change to "full" to use flet-audio and flet-video
+{%- endif %}
 org = "com.mycompany"
 product = "{{cookiecutter.project_name}}"
 company = "Flet"
